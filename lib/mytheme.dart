@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 /////////singleton//////
 class MyThemeData {
   static const Color lightColor = Color(0xffB7935F);

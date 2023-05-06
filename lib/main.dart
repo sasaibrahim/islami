@@ -7,7 +7,6 @@ import 'package:islami/provider/myprovider.dart';
 import 'package:islami/sura_content.dart';
 import 'package:islami/tabs/hadeth_details.dart';
 import 'package:provider/provider.dart';
-
 void main() {
   runApp(ChangeNotifierProvider(
       create: (context) => MyProvider(), child: MyApp()));

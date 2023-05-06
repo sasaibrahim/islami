@@ -48,7 +48,6 @@ class _AhadethTabState extends State<AhadethTab> {
       ),
     );
   }
-
 //////method to split the file to (title ,content)///////
   ///// repositry//////
   void loadFile() {

@@ -48,26 +48,31 @@ class _SuraContentState extends State<SuraContent> {
                         borderRadius: BorderRadius.circular(22),
                         side:
                             BorderSide(color: Theme.of(context).primaryColor)),
-                    child: ListView(
-                      children: [
-                        RichText(
-                            textDirection: TextDirection.rtl,
-                            textAlign: verses.length <= 20
-                                ? TextAlign.center
-                                : TextAlign.justify,
-                            text: TextSpan(children: [
-                              for (var i = 0; i < verses.length; i++) ...{
-                                TextSpan(
-                                    text: '${verses[i]}',
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ListView(
+                        children: [
+                          RichText(
+                              textDirection: TextDirection.rtl,
+                              textAlign: verses.length <= 20
+                                  ? TextAlign.center
+                                  : TextAlign.justify,
+                              text: TextSpan(children: [
+                                for (var i = 0; i < verses.length; i++) ...{
+                                  TextSpan(
+                                      text: '${verses[i]}',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyMedium),
+                                  TextSpan(
+                                    text: '\u06dd${i + 1}',
                                     style:
-                                        Theme.of(context).textTheme.bodyMedium),
-                                TextSpan(
-                                  text: '\u06dd${i + 1}',
-                                  style: Theme.of(context).textTheme.bodySmall,
-                                ),
-                              }
-                            ]))
-                      ],
+                                        Theme.of(context).textTheme.bodySmall,
+                                  ),
+                                }
+                              ]))
+                        ],
+                      ),
                     ),
                   )));
   }
