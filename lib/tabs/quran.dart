@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami/sura_args.dart';
 
 import '../sura_content.dart';
-
 class QuranTap extends StatelessWidget {
   List<String> suraName = [
     "الفاتحه",
@@ -132,8 +132,8 @@ class QuranTap extends StatelessWidget {
             color: Theme.of(context).primaryColor,
           ),
           Text(
-            'Suraname',
-            style: Theme.of(context).textTheme.bodyLarge,
+            AppLocalizations.of(context)!.suraNames,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
           Divider(
             thickness: 2,
@@ -156,7 +156,7 @@ class QuranTap extends StatelessWidget {
                   child: Text(
                     suraName[index],
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyLarge,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 );
               },

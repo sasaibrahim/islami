@@ -4,3 +4,4 @@ class SuraArgs {
 
   SuraArgs({required this.suraname, required this.index});
 }
+/////////////// class singleton//////
